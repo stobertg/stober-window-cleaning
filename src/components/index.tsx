@@ -1,3 +1,4 @@
+export { About } from './About/About'
 export { Bio } from './Bio/Bio'
 export { Button } from './Button/Button'
 export { ButtonContainer } from './ButtonContainer/ButtonContainer'

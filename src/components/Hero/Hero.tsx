@@ -10,23 +10,9 @@ const HeroWrap = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100vw',
-  height: '95vh',
+  height: '100vh',
   maxHeight: 900,
-  overflow: 'hidden',
-
-  // For the white slant on the bottom of the container
-  // This stretches the full width of the screen
-
-  '&:after': {
-    content: '',
-    position: 'absolute',
-    bottom: -280,
-    width: '110%',
-    height: 400,
-    background: '$bgPrimary',
-    transform: 'rotate( 8deg )',
-    zIndex: 1
-  }
+  overflow: 'hidden'
 })
 
 // For the contianer of the background image and the text
@@ -64,7 +50,7 @@ const HeroText = styled('div', {
   position: 'relative',
   maxWidth: 1200,
   width: '90%',
-  height: '90%',
+  height: '80%',
   margin: '0 auto',
   zIndex: 20
 })

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Hero, Bio, PageBlock, PageBlockItem, Heading, Services } from '@components'
+import { Hero, Intro, About, Bio, PageBlock, PageBlockItem, Heading, Services } from '@components'
 
 export default function Home() {
   return (
@@ -21,6 +21,21 @@ export default function Home() {
           </>
         }
       />
+
+      <PageBlock width="medium">
+        <Intro />
+      </PageBlock>
+
+      <PageBlock width="medium" bgColor="blue">
+        <About 
+          items={[
+            { title: "Member of BBB with an A+ rating" },
+            { title: "It's Our 62 year anniversary" },
+            { title: "Fully insured with worker's comp" },
+            { title: "We don't like rain, either" }
+          ]}
+        />
+      </PageBlock>
       
       <PageBlock width="medium" blockItemSpacing="l2">
         <PageBlockItem align="center">

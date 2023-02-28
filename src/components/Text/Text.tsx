@@ -46,7 +46,8 @@ const TextWrap = styled('div', {
 
     fontSize: {
       l0: { fontSize: '$s1', lineHeight: 1.3 },
-      l1: { fontSize: '$s2', lineHeight: 1.5 }
+      l1: { fontSize: '$s2', lineHeight: 1.5 },
+      l2: { fontSize: '$s3', lineHeight: 1.75 }
     },
 
     // For the alignment od the text within the container
@@ -68,7 +69,7 @@ const TextWrap = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface TextProps {
-  fontSize?: 'l0' | 'l1'
+  fontSize?: 'l0' | 'l1' | 'l2'
   width?: 'small'
   alignment?: 'center'
   font?: 'serif' | 'sansSerif'

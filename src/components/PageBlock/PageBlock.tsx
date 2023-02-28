@@ -6,7 +6,28 @@ import { styled } from '@theme'
 
 const BlockWrap = styled('div', {
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  padding: '100px 0 400px',
+
+  // For the slants on the top of the top and bottom of the container
+
+  '&:before': {
+    content: '',
+    position: 'absolute',
+    top: -150,
+    left: 0,
+    width: '100%',
+    height: 'calc( 100% + 300px )',
+    background: '$bgPrimary',
+    transform: 'skew( 0deg, 8deg )'
+  },
+
+  variants: {
+    bgColor: {
+      gray: { '&:before': { background: '$white100' }},
+      blue: { '&:before': { background: '$blue100' }}
+    }
+  }
 })
 
 // For all of the content within the master container
@@ -40,6 +61,7 @@ const BlockContent = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface BlockProps {
+  bgColor?: 'blue' | 'gray'
   width?: 'small' | 'medium' | 'large'
   blockItemSpacing?: 'l0' | 'l1' | 'l2'
   children: React.ReactNode
@@ -48,6 +70,7 @@ interface BlockProps {
 // ---------- This is the end of declarations ---------- //
 
 export const PageBlock = ({ 
+    bgColor,
     width, // Optional - for the width of the content to not be 100% by default
     blockItemSpacing, // Optional - for the spcing between each of the items within the container
     children // Required - For the content within the container
@@ -55,7 +78,7 @@ export const PageBlock = ({
   
   return(
 
-    <BlockWrap>
+    <BlockWrap {...{ bgColor }}>
       <BlockContent {...{ width, blockItemSpacing }}>
         { children }
       </BlockContent>
