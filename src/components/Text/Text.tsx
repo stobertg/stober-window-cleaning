@@ -47,7 +47,8 @@ const TextWrap = styled('div', {
     fontSize: {
       l0: { fontSize: '$s1', lineHeight: 1.3 },
       l1: { fontSize: '$s2', lineHeight: 1.5 },
-      l2: { fontSize: '$s3', lineHeight: 1.75 }
+      l2: { fontSize: '$s3', lineHeight: 1.75 },
+      l3: { fontSize: '$s4', lineHeight: 1.75 }
     },
 
     // For the alignment od the text within the container
@@ -61,7 +62,8 @@ const TextWrap = styled('div', {
     // By default, the text is 100% widt hand this allows for changes for the readability of the text
 
     width: {
-      small: { maxWidth: 600 }
+      small: { maxWidth: 600 },
+      large: { maxWidth: 1000 }
     }
   }
 })
@@ -69,7 +71,7 @@ const TextWrap = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface TextProps {
-  fontSize?: 'l0' | 'l1' | 'l2'
+  fontSize?: 'l0' | 'l1' | 'l2' | 'l3'
   width?: 'small'
   alignment?: 'center'
   font?: 'serif' | 'sansSerif'
@@ -88,7 +90,10 @@ export const Text = ({
   
   return(
 
-    <TextWrap {...{ fontSize, width, alignment, font }}>
+    <TextWrap 
+      {...{ fontSize, alignment, font }}
+      width={ fontSize == 'l3' ? 'large' : width }
+    >
       { children }
     </TextWrap>
     

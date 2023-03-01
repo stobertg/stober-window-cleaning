@@ -31,7 +31,7 @@ const Header = styled('header', {
   // For the background to be blur for the before and white overlay on top
 
   '&:before': { backdropFilter: 'blur( 10px )' },
-  '&:after': { background: 'rgba( 255, 255, 255, 0.6 )' },
+  '&:after': { background: 'rgba( 255, 255, 255, 0.8 )' },
 
   variants: {
     scroll: {

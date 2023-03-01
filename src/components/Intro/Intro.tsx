@@ -3,11 +3,17 @@ import { styled } from '@theme'
 import { Heading, Text } from '@components'
 
 const IntroWrap = styled('div', {
-
+  position: 'relative',
+  width: '100%'
 })
 
 const IntroContent = styled('div', {
+  position: 'relative',
+  width: '100%',
 
+  '> *:not(:last-child)': {
+    marginBottom: 100
+  }
 })
 
 const IntroHero = styled('div', {
@@ -19,12 +25,19 @@ const IntroHero = styled('div', {
 })
 
 const IntroImage = styled('div', {
-
+  position: 'relative',
+  maxWidth: 520,
+  width: '90%'
 })
 
 const IntroTitle = styled('div', {
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  textAlign: 'center',
+
+  '> *:not(:last-child)': {
+    marginBottom: 4
+  }
 })
 
 const IntroText = styled('div', {
@@ -49,7 +62,7 @@ export const Intro = ({}:IntroProps) => {
         <IntroTitle>
           <Heading bold size="l7" title="Welcome to Stober Window Cleaning" />
           <Heading size="l3" title="Cleaning windows the right way since 1954" />
-          <Heading title="513.734.2205" />
+          <Heading size="l3" title="513.734.2205" />
         </IntroTitle>
 
         <IntroHero>

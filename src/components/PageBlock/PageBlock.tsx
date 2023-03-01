@@ -7,7 +7,11 @@ import { styled } from '@theme'
 const BlockWrap = styled('div', {
   position: 'relative',
   width: '100%',
-  padding: '100px 0 400px',
+  padding: '50px 0 400px',
+
+  '&:last-child': {
+    paddingBottom: 50
+  },
 
   // For the slants on the top of the top and bottom of the container
 
@@ -24,8 +28,8 @@ const BlockWrap = styled('div', {
 
   variants: {
     bgColor: {
-      gray: { '&:before': { background: '$white100' }},
-      blue: { '&:before': { background: '$blue100' }}
+      gray: { '&:before': { background: '$bgSecondary' }},
+      blue: { '&:before': { background: '$blue800' }}
     }
   }
 })

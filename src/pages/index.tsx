@@ -29,8 +29,8 @@ export default function Home() {
       <PageBlock width="medium" bgColor="blue">
         <About 
           items={[
-            { title: "Member of BBB with an A+ rating" },
-            { title: "It's Our 62 year anniversary" },
+            { href: 'https://www.bbb.org/us/oh/amelia/profile/window-cleaning/stober-window-cleaning-inc-0292-19001450', title: "Member of BBB with an A+ rating" },
+            { anniversary: true, title: `It's Our ${ (new Date().getFullYear()) - 1954 }th year anniversary` },
             { title: "Fully insured with worker's comp" },
             { title: "We don't like rain, either" }
           ]}
@@ -108,7 +108,7 @@ export default function Home() {
         </PageBlockItem>
       </PageBlock>
 
-      <PageBlock width="medium">
+      <PageBlock width="medium" bgColor="gray">
         <Services
           services={[
             { image: '/illustrations/window.svg', title: 'Windows' },

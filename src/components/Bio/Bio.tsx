@@ -58,7 +58,7 @@ const BioImage = styled('figure', {
   height: 300,
   overflow: 'hidden',
   borderRadius: '$r2',
-  boxShadow: '0 2px 20px rgba( 0, 0, 0, 0.2 )',
+  boxShadow: '0 2px 20px rgba( 0, 0, 0, 0.1 )',
 
   // For the width and height declaration of the image within the container
   // We set this image to be like a background position cover
@@ -129,7 +129,7 @@ export const Bio = ({ title, people }:BioProps) => {
             <BioText>
               <div>
                 <Heading heavy size="l5" title={ person.name } />
-                <Text fontSize="l1">{ person.bio }</Text>
+                <Text fontSize="l2">{ person.bio }</Text>
               </div>
             </BioText>
           </BioContent>

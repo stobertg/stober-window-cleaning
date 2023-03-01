@@ -44,8 +44,8 @@ const ServiceImage = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  height: 200,
-  background: '$bgSecondary',
+  height: 220,
+  background: '$bgPrimary',
   borderRadius: '$r1',
 
   img: {
