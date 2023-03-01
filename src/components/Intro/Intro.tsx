@@ -12,7 +12,11 @@ const IntroContent = styled('div', {
   width: '100%',
 
   '> *:not(:last-child)': {
-    marginBottom: 100
+    marginBottom: 100,
+
+    '@tablet': {
+      marginBottom: 50
+    }
   }
 })
 
@@ -21,7 +25,15 @@ const IntroHero = styled('div', {
   flexDirection: 'row',
   alignItems: 'center',
   position: 'relative',
-  width: '100%'
+  width: '100%',
+
+  '@tablet': {
+    flexDirection: 'column',
+
+    '> *:not(:last-child)': {
+      marginBottom: 32
+    }
+  }
 })
 
 const IntroImage = styled('div', {
@@ -46,7 +58,8 @@ const IntroText = styled('div', {
   '> div': {
     width: '80%',
     margin: '0 auto',
-    p: { lineHeight: 1.75 }
+    p: { lineHeight: 1.75 },
+    '@tablet': { width: '100%' }
   }
 })
 

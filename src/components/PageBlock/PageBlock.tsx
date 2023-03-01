@@ -8,6 +8,7 @@ const BlockWrap = styled('div', {
   position: 'relative',
   width: '100%',
   padding: '50px 0 400px',
+  '@tablet': { padding: '0 0 300px' },
 
   // For the slants on the top of the top and bottom of the container
 
@@ -22,11 +23,19 @@ const BlockWrap = styled('div', {
     transform: 'skew( 0deg, 8deg )'
   },
 
-  '&:last-child': {
+  '&:nth-last-child(2)': {
     paddingBottom: 50,
+
     '&:before': { 
       height: 'calc( 100% - 150px )',
       transform: 'skew( 0deg, 8deg, 0deg, 0deg )' 
+    }
+  },
+
+  '&:last-child': {
+    paddingBottom: 50,
+    '&:before': { 
+      display: 'none'
     }
   },
 
@@ -50,7 +59,7 @@ const BlockContent = styled('div', {
 
   variants: {
     width: {
-      small: {},
+      small: { maxWidth: 800, width: '90%' },
       medium: { maxWidth: 1100, width: '90%' },
       large: {}
     },

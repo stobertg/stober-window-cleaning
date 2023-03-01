@@ -1,4 +1,4 @@
-import { HeadTags, Hero, Intro, About, Bio, PageBlock, PageBlockItem, Heading, Services } from '@components'
+import { HeadTags, Hero, Intro, About, Bio, History, PageBlock, PageBlockItem, Heading, Services } from '@components'
 
 export default function Home() {
   return (
@@ -111,6 +111,10 @@ export default function Home() {
             { image: '/illustrations/screen.svg', title: 'Screens' }
           ]}
         />
+      </PageBlock>
+
+      <PageBlock width="small">
+        <History />
       </PageBlock>
     </>
   )

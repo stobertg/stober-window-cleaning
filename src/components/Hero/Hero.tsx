@@ -12,7 +12,11 @@ const HeroWrap = styled('div', {
   width: '100vw',
   height: '100vh',
   maxHeight: 900,
-  overflow: 'hidden'
+  overflow: 'hidden',
+
+  '@tablet': {
+    maxHeight: 600
+  }
 })
 
 // For the contianer of the background image and the text
@@ -58,6 +62,11 @@ const HeroText = styled('div', {
 
   'figcaption > *:not(:last-child)': {
     marginBottom: 8
+  },
+
+  '@tablet': {
+    height: '90%',
+    textAlign: 'center'
   }
 })
 
