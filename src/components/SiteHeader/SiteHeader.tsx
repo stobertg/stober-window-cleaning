@@ -40,7 +40,7 @@ const Header = styled('header', {
     },
 
     bg: {
-      show: { '&:before, &:after': { opacity: 1 }},
+      show: { 'nav': { padding: '12px 0' }, '&:before, &:after': { opacity: 1 }},
       hide: { '&:before, &:after': { opacity: 0 }}
     }
   }
@@ -87,28 +87,27 @@ interface HeaderProps {
 // ---------- This is the end of declarations ---------- //
 
 export const SiteHeader = ({ ref, buttons }:HeaderProps) => {
-  const [ show, setShow ] = useState( true )
-  const [ bg, setBg ] = useState( false )
+  const [ showHeader, setShowHeader ] = useState( true );
+  const [ scrollPos, setScrollPos ] = useState( 0 );
 
   useEffect(() => {
-    let prevScrollpos = window.pageYOffset
-
-    window.onscroll = function () {
-      const currentScrollPos = window.pageYOffset
-      if ( prevScrollpos > currentScrollPos || currentScrollPos < 100 ) {
-        setShow( true )
-      } else {
-        setShow( false )
-      }
-      prevScrollpos = currentScrollPos
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const shouldShowHeader = currentScrollPos < scrollPos || currentScrollPos < 50;
+      setScrollPos(currentScrollPos);
+      setShowHeader(shouldShowHeader);
     }
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [ scrollPos ])
 
   return(
 
     <Header 
-      scroll={ show ? 'up' : 'down' }
-      bg={ bg ? 'show' : 'hide' }
+      scroll={ showHeader ? 'up' : 'down' }
+      bg={ showHeader && scrollPos > 400 ? 'show' : 'hide' }
       {...{ ref }}
     >
       <Nav> 
