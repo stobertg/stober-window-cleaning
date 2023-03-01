@@ -50,9 +50,15 @@ const HeroText = styled('div', {
   position: 'relative',
   maxWidth: 1200,
   width: '90%',
-  height: '80%',
+  height: '85%',
   margin: '0 auto',
-  zIndex: 20
+  color: '$textSecondary',
+  fontSize: '$s2',
+  zIndex: 20,
+
+  'figcaption > *:not(:last-child)': {
+    marginBottom: 8
+  }
 })
 
 // -------------- Typescript declarations -------------- //

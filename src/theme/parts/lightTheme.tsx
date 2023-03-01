@@ -1,6 +1,7 @@
 export const lightThemeColors = {
   bgPrimary: '#fff',
-  bgSecondary: '#fbfcfc',
+  bgSecondary: '#f2f7ff',
+  textDarkBg: '#e7ecff',
 
 
   // Primary Brand Colors

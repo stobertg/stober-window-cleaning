@@ -57,7 +57,7 @@ const Nav = styled('nav', {
   position: 'relative',
   width: '90%',
   margin: '0 auto',
-  padding: '12px 0',
+  padding: '20px 0',
   zIndex: 10
 })
 

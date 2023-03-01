@@ -3,8 +3,7 @@ import { styled } from '@theme'
 
 const SiteWrap = styled('div', {
   position: 'relative',
-  width: '100%',
-  padding: '0 0 100px'
+  width: '100%'
 })
 
 interface SiteProps {

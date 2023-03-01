@@ -64,6 +64,10 @@ const TextWrap = styled('div', {
     width: {
       small: { maxWidth: 600 },
       large: { maxWidth: 1000 }
+    },
+
+    color: {
+      darkBg: { p:{ color: '$textDarkBg' }}
     }
   }
 })
@@ -75,6 +79,7 @@ interface TextProps {
   width?: 'small'
   alignment?: 'center'
   font?: 'serif' | 'sansSerif'
+  color?: 'darkBg'
   children: React.ReactNode
 }
 
@@ -85,13 +90,14 @@ export const Text = ({
     children, // Supporting the text, quotes, bullets, ect within the text component
     width, // Supporting the width of the text within the container
     alignment, // Supporting the center alignment of the text within the container
-    font // Supporting the ability to have different fonts within the text component - serif and sansserif
+    font, // Supporting the ability to have different fonts within the text component - serif and sansserif
+    color // Supporting the text on different background
   }: TextProps ) => {
   
   return(
 
     <TextWrap 
-      {...{ fontSize, alignment, font }}
+      {...{ fontSize, alignment, font, color }}
       width={ fontSize == 'l3' ? 'large' : width }
     >
       { children }

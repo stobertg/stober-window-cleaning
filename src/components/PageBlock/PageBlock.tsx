@@ -9,10 +9,6 @@ const BlockWrap = styled('div', {
   width: '100%',
   padding: '50px 0 400px',
 
-  '&:last-child': {
-    paddingBottom: 50
-  },
-
   // For the slants on the top of the top and bottom of the container
 
   '&:before': {
@@ -24,6 +20,14 @@ const BlockWrap = styled('div', {
     height: 'calc( 100% + 300px )',
     background: '$bgPrimary',
     transform: 'skew( 0deg, 8deg )'
+  },
+
+  '&:last-child': {
+    paddingBottom: 50,
+    '&:before': { 
+      height: 'calc( 100% - 150px )',
+      transform: 'skew( 0deg, 8deg, 0deg, 0deg )' 
+    }
   },
 
   variants: {

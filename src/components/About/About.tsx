@@ -21,7 +21,7 @@ const AboutContent = styled('div', {
 const AboutText = styled('div', {
 
   '> *:not(:last-child)': {
-    marginBottom: 20
+    marginBottom: 32
   }
 })
 
@@ -51,14 +51,33 @@ const AttrImage = styled('div', {
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  position: 'relative',
   width: 180,
   height: 180,
   borderRadius: '50%',
-  border: '2px solid $bgPrimary',
+  border: '4px solid $bgPrimary',
 
   img: {
     height: '50%',
     width: 'auto'
+  },
+
+  variants: {
+    variant: {
+
+      // For the strike-through for the rain component
+
+      cancel: {
+        '&:after': {
+          content: '',
+          position: 'absolute',
+          width: 4,
+          height: '100%',
+          background: '$bgPrimary',
+          transform: 'rotate( 45deg )'
+        }
+      }
+    }
   }
 })
 
@@ -69,9 +88,11 @@ const AttrTitle = styled('div', {
 
 interface AboutProps {
   items: {
+    variant?: 'cancel'
     anniversary?: boolean
     href?: string
     title: string
+    image?: string
   }[]
 }
 
@@ -81,8 +102,8 @@ export const About = ({ items }:AboutProps) => {
     <AboutWrap>
       <AboutContent>
         <AboutText>
-          <h3><Heading bold size="l7" title="A little about us" /></h3>
-          <Text fontSize="l3">
+          <h3><Heading bold size="l8" title="A little about us" /></h3>
+          <Text fontSize="l3" color="darkBg">
             <p>
               We perform Residential and Commercial window cleaning in Eastern Cincinnati and surrounding counties North of the river. 
               We specialize in windows, gutters, light fixtures, mirrors and chandeliers, as well as treating the inside of your home 
@@ -100,7 +121,7 @@ export const About = ({ items }:AboutProps) => {
                 
                 <a href={ item.href } target="_blank" rel="noreferrer">
                   <Attr key={`item-${ i }`}>
-                    <AttrImage><img src="/icons/bbb.svg" alt={ item.title } /></AttrImage>
+                    <AttrImage><img src={ item.image } alt={ item.title } /></AttrImage>
                     <AttrTitle><h2><Heading size="l3" title={ item.title } /></h2></AttrTitle>
                   </Attr>
                 </a>
@@ -118,7 +139,7 @@ export const About = ({ items }:AboutProps) => {
               ) : (
 
                 <Attr key={`item-${ i }`}>
-                  <AttrImage><img src="/icons/bbb.svg" alt={ item.title } /></AttrImage>
+                  <AttrImage variant={ item.variant }><img src={ item.image } alt={ item.title } /></AttrImage>
                   <AttrTitle><h2><Heading size="l3" title={ item.title } /></h2></AttrTitle>
                 </Attr>
 
