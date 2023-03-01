@@ -1,9 +1,33 @@
-import { HeadTags, Hero, Intro, About, Bio, History, PageBlock, PageBlockItem, Heading, Services } from '@components'
+import React, { useRef } from 'react'
+import { SiteHeader, HeadTags, Hero, Intro, About, Bio, History, PageBlock, PageBlockItem, Heading, Services } from '@components'
 
 export default function Home() {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const scrollToAbout = () => scrollToAnchor( "about" )
+  const scrollToServices = () => scrollToAnchor( "services" )
+  const scrollToHistory = () => scrollToAnchor( "history" )
+  const scrollToContact = () => scrollToAnchor( "contact" )
+
+  const scrollToAnchor = (anchorName: string) => {
+    const anchorElement = document.getElementById(anchorName);
+    if (anchorElement) {
+      anchorElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <>
       <HeadTags />
+      <SiteHeader
+        ref={ scrollRef } 
+        buttons={[
+          { onClick: scrollToAbout, title: 'About' },
+          { onClick: scrollToServices, title: 'Services' },
+          { onClick: scrollToHistory, title: 'History' },
+          { onClick: scrollToContact, title: 'Contact' }
+        ]}
+      />
+
       <Hero 
         image="/heros/gramps.jpeg"
         imageAlt="Lloyd Stober, the original founder of Stober Window Cleaning"

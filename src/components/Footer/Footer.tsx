@@ -3,10 +3,17 @@ import Script from 'next/script'
 import { styled } from '@theme'
 import { Button, Heading, Text } from '@components'
 
+// For the master container of the footer, located globally on the bottom of the page
+// This contains the intro text on the top, Jobber form in the middle, and the smaller details on the bottom
+
 const FooterWrap = styled('footer', {
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  marginTop: 100
 })
+
+// For the container of the all of the content within the master container
+// This allows for the content to be positied hotizontally centered in the container
 
 const FooterContent = styled('div', {
   position: 'relative',
@@ -15,28 +22,20 @@ const FooterContent = styled('div', {
   margin: '0 auto'
 })
 
+// For the container of the intro section on the top of the container
+// This holds the title, intro text and the email and phone contact
+
 const FooterIntro = styled('div', {
   position: 'relative',
   width: '100%',
   marginBottom: 50,
   textAlign: 'center',
 
+  // Here we automate the spacing between all of the text blocks within the container
+
   '> *:not(:last-child)': {
     marginBottom: 12
   }
-})
-
-const WindowCleaners = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-
-  '> *:not(:last-child)': {
-    marginRight: 12
-  }
-})
-
-const WindowCleaner = styled('div', {
-  width: 28
 })
 
 const JobbberHolder = styled('div', {
@@ -44,7 +43,11 @@ const JobbberHolder = styled('div', {
   width: '100%',
   padding: '100px 0',
   border: '1px solid $border',
-  borderRadius: '$r3'
+  borderRadius: '$r3',
+
+  '@tablet': {
+    padding: '32px 0'
+  }
 })
 
 const FooterDetails = styled('div', {
@@ -54,8 +57,46 @@ const FooterDetails = styled('div', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  marginTop: 32
+  marginTop: 32,
+
+  '@tablet': {
+    flexDirection: 'column',
+    width: '80%',
+    margin: '50px auto 0',
+    textAlign: 'center',
+    lineHeight: 1.3,
+
+    '> *:not(:last-child)': {
+      marginBottom: 20
+    }
+  }
 })
+
+// For the container of the window cleaner illustrations on the left of the bottom container
+// This contains two of the men for illustrative purposes
+
+const WindowCleaners = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+
+  // This automates the spacing to the right of each of the illustrations
+  // This doesn't apply to the last worker in the container
+
+  '> *:not(:last-child)': {
+    marginRight: 12
+  }
+})
+
+// For the container of the individual illustration
+// This just dictates the sizing of the illustrations
+
+const WindowCleaner = styled('div', {
+  width: 28
+})
+
+
+
+
 
 interface FooterProps {
 
@@ -64,7 +105,7 @@ interface FooterProps {
 export const Footer = ({}:FooterProps) => {
   return(
 
-    <FooterWrap>
+    <FooterWrap id="contact">
       <FooterContent>
         <FooterIntro>
           <Heading size="l7" title="Contact us today" />
@@ -74,6 +115,7 @@ export const Footer = ({}:FooterProps) => {
           </Text>
           <a href="mailto:stoberwindowcleaning@gmail.com"><Heading size="l3" title="stoberwindowcleaning@gmail.com" /></a>
           <a href="tel:513-734-2205"><Heading size="l3" title="513.734.2205" /></a>
+          <Heading size="l3" title="PO Box 263, Amelia, Ohio" />
         </FooterIntro>
 
         <Script 

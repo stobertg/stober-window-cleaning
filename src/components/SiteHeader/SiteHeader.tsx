@@ -73,9 +73,14 @@ const LogoFigCap = styled('figcaption', {
   display: 'none'
 })
 
+interface HeaderProps {
+  ref: any
+  buttons: any
+}
+
 // ---------- This is the end of declarations ---------- //
 
-export const SiteHeader = () => {
+export const SiteHeader = ({ ref, buttons }:HeaderProps) => {
   const [ show, setShow ] = useState( true )
   const [ bg, setBg ] = useState( false )
 
@@ -85,11 +90,9 @@ export const SiteHeader = () => {
     window.onscroll = function () {
       const currentScrollPos = window.pageYOffset
       if ( prevScrollpos > currentScrollPos || currentScrollPos < 100 ) {
-        setBg( true )
         setShow( true )
       } else {
         setShow( false )
-        setBg( false )
       }
       prevScrollpos = currentScrollPos
     }
@@ -100,6 +103,7 @@ export const SiteHeader = () => {
     <Header 
       scroll={ show ? 'up' : 'down' }
       bg={ bg ? 'show' : 'hide' }
+      {...{ ref }}
     >
       <Nav> 
         <Logo>
@@ -109,12 +113,7 @@ export const SiteHeader = () => {
 
         <ButtonContainer
           spacing='l0'
-          buttons={[
-            { title: 'About' },
-            { title: 'Services' },
-            { title: 'History' },
-            { title: 'Contact' }
-          ]}
+          {...{ buttons }}
         />
       </Nav>
     </Header>

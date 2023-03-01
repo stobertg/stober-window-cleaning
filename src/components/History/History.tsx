@@ -67,7 +67,7 @@ interface HistoryProps {
 export const History = ({}:HistoryProps) => {
   return(
 
-    <HistoryWrap>
+    <HistoryWrap id="history">
       <LittleWorkers>
         <LittleWorker><img src="/illustrations/dude.svg" alt="Stober Window Cleaning" /></LittleWorker>
         <LittleWorker><img src="/illustrations/dude.svg" alt="Stober Window Cleaning" /></LittleWorker>

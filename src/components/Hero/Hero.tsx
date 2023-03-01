@@ -40,6 +40,7 @@ const HeroImage = styled('figure', {
     minWidth: '100vw',
     height: '100%',
     objectFit: 'cover',
+    objectPosition: '0 -20px',
     zIndex: 0
   }
 })

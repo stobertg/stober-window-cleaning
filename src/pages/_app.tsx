@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import { globalStyles, lightTheme, darkTheme } from '@theme'
 import { ThemeProvider } from 'next-themes'
-import { SiteContainer, SiteHeader, Footer, PageBlock } from '@components'
+import { SiteContainer, Footer, PageBlock } from '@components'
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -19,7 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
       enableSystem={ false }
       defaultTheme="light"
     > 
-      <SiteHeader />
       <SiteContainer>
         <Component {...pageProps} />
         <PageBlock><Footer /></PageBlock>

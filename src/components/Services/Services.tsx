@@ -71,7 +71,7 @@ interface ServiceProps {
 export const Services = ({ services }:ServiceProps) => {
   return(
 
-    <ServiceWrap>
+    <ServiceWrap id="services">
       <Heading size="l7" title="What We Do" />
 
       <ServicesList>

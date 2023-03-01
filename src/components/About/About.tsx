@@ -30,9 +30,15 @@ const AboutAttrs = styled('div', {
   gridTemplateColumns: 'repeat(4, 1fr)',
   gridTemplateRows: '1fr',
   gridColumnGap: '12px',
-  gridRowGap: '0px',
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  textAlign: 'center',
+
+  '@smallDesktop': {
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateRows: '2fr',
+    gridRowGap: '32px'
+  }
 })
 
 const Attr = styled('div', {
@@ -43,6 +49,10 @@ const Attr = styled('div', {
 
   '> *:not(:last-child)': {
     marginBottom: 20
+  },
+
+  '@smallDesktop': {
+    alignItems: 'center'
   }
 })
 
@@ -99,7 +109,7 @@ interface AboutProps {
 export const About = ({ items }:AboutProps) => {
   return(
 
-    <AboutWrap>
+    <AboutWrap id="about">
       <AboutContent>
         <AboutText>
           <h3><Heading bold size="l8" title="A little about us" /></h3>
