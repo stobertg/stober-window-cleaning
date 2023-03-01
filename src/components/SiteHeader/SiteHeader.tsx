@@ -58,7 +58,13 @@ const Nav = styled('nav', {
   width: '90%',
   margin: '0 auto',
   padding: '20px 0',
-  zIndex: 10
+  zIndex: 10,
+
+  '@tablet': {
+    '> *:last-child': {
+      '> *:not(:last-child)': { display: 'none' }
+    }
+  }
 })
 
 // For the container of the logo on the left of the header
