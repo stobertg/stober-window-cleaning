@@ -116,9 +116,9 @@ export const About = ({ items }:AboutProps) => {
           <Text fontSize="l3" color="darkBg">
             <p>
               We perform Residential and Commercial window cleaning in Eastern Cincinnati and surrounding counties North of the river. 
-              We specialize in windows, gutters, light fixtures, mirrors and chandeliers, as well as treating the inside of your home 
-              like our own. Between all of our employees we have over 80 years of experience. Having been in business since 1954, we 
-              have a proven reputation of giving our customers superior service.
+              We specialize in windows, gutters, light fixtures, mirrors and chandeliers. Between all of our employees we have over 80 
+              years of experience. Having been in business since 1954, we have a proven reputation of giving our customers superior 
+              service.
             </p>
           </Text>
         </AboutText>

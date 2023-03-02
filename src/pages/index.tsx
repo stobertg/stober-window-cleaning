@@ -48,7 +48,7 @@ export default function Home() {
           items={[
             { href: 'https://www.bbb.org/us/oh/amelia/profile/window-cleaning/stober-window-cleaning-inc-0292-19001450', image: '/icons/bbb.svg', title: "Member of BBB with an A+ rating" },
             { anniversary: true, title: `It's Our ${ (new Date().getFullYear()) - 1954 }th year anniversary` },
-            { image: '/icons/injury.svg', title: "Fully insured with worker's comp" },
+            { image: '/icons/injury.svg', title: "Fully insured and Workman's Comp" },
             { variant: 'cancel', image: '/icons/cloud-rain.svg', title: "We don't like rain, either" }
           ]}
         />
@@ -68,9 +68,9 @@ export default function Home() {
                 name: 'Ryan Stober',
                 bio: <>
                   <p>
-                    Ryan is the Third Generation and has been with the company for over 18 years. He took over the company upon 
-                    Dan&apos;s retirement He resides in Amelia with his Wife Ashley Stober and their two children. He enjoys spending 
-                    his free time camping with his family as well as playing some golf in his free time when weather allows.
+                    Ryan is the third generation and has been with the company for over 18 years. He took over the company upon 
+                    Dan&apos;s retirement. He resides in Amelia with his wife Ashley Stober and their two children. He enjoys spending 
+                    his free time camping with his family. He also enjoys playing golf in his free time when weather allows.
                   </p>
                 </> 
               },
@@ -79,7 +79,7 @@ export default function Home() {
                 name: 'Grant Stober',
                 bio: <>
                   <p>
-                    Grant has been with the company since 2016. He resides In Milford. In his free time he enjoys working on his car 
+                    Grant has been with the company since 2016. He resides in Milford. In his free time he enjoys working on his car 
                     and spending time at the gym. He also enjoys trying new recipes in the kitchen.
                   </p>
                 </> 
@@ -89,9 +89,9 @@ export default function Home() {
                 name: 'Josh Ausman',
                 bio: <>
                   <p>
-                    Josh has been with stober window cleaning for over 10 yrs.He and his wife Devan live in Bethel close to family 
-                    and friends, They are expecting their first child this spring. They are both very excited to start their family. 
-                    In his free time he enjoys playing tennis, camping , hunting as well as some aviation.
+                    Josh has been with Stober Window Cleaning for over 10 years. He and his wife Devan live in Bethel, close to family 
+                    and friends. They are expecting their second child this summer. They are both very excited to growing their family. 
+                    In his free time he enjoys playing tennis, camping and hunting, as well as some aviation.
                   </p>
                 </> 
               },
@@ -100,10 +100,10 @@ export default function Home() {
                 name: 'Ashley Stober',
                 bio: <>
                   <p>
-                    Ashley has just recently started with the company as of January 2022 upon Maria Stober&apos;s retirement, she resides 
-                    in amelia. She enjoys spending time on projects with her craft and t-shirt business as well as family time with her 
-                    two children and Ryan Stober.They all enjoy the outdoors which is where they spend the majority of their time in the 
-                    spring, summer and fall.
+                    Ashley has just recently started with the company as of January 2022 upon Maria Stober&apos;s retirement. She enjoys 
+                    spending time on projects with her craft and t-shirt business, as well as family time with her two children and Ryan 
+                    Stober. They all enjoy the outdoors which is where they spend the majority of their time in the spring, summer and 
+                    fall.
                   </p>
                 </> 
               },
@@ -113,9 +113,9 @@ export default function Home() {
                 bio: <>
                   <p>
                     Dan is a second generation with over 30 years of experience. While in highschool Dan worked for his father during the 
-                    summers and local areas after school. He joined full time at the age of 18, eventually taking over the company with his 
-                    brother Chris. In 2018 Following Chris Stober&apos;s retirement he became co owners with his son Ryan Stober. When he&apos;s 
-                    not working, Dan enjoys boating, camping, golf and spending time with his grandchildren. He currently resides in 
+                    summers. He joined full time at the age of 18, eventually taking over the company with his brother Chris. In 2018, 
+                    following Chris Stober&apos;s retirement, he became co owners with his son Ryan Stober. When he&apos;s 
+                    not working Dan enjoys boating, camping, golf and spending time with his grandchildren. He currently resides in 
                     Bethel with his wife Maria.
                   </p>
                 </> 
